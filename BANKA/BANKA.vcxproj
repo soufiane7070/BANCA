@@ -130,10 +130,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="investimento_breve.cpp">
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MaxSpeed</Optimization>
-      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Speed</FavorSizeOrSpeed>
-    </ClCompile>
     <ClCompile Include="client.cpp" />
     <ClCompile Include="banc.cpp" />
     <ClCompile Include="Origine.cpp" />

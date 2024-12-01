@@ -14,7 +14,7 @@ public:
   client(double mon, string nom);
   void add_mony(double cash) { money += cash; };
   void print_info() {
-    cout << "i tuoi soldi sotto il letto: " << money << " Sign."<<nome << endl;
+    cout << "i tuoi soldi nel portafoglio: " << money << " Sign. "<<nome << endl;
 
   }
 };
