@@ -7,33 +7,29 @@ class banc {
   double invest;
 public:
   banc(client p, double p2);
- 
+  void drop(double cash) { balance += cash;
+  }
+  double getbal() { return balance;
+  }
   void investimento_breve(client p, double sold, double inte) {
-      if (sold - balance == 0) {
-          cout << "error" << endl;           //controllo se il cliente ha la somma investita
-          return;
-      }
+  
       cout << "investimento breve di 1 anno" << endl;
       invest += sold;
       cout << "ok" << "la quantità investita aumenterà e del" << " % " << inte << " al mese" << endl;
       for (int i = 0; i < 12; i++) {
-          p.add_mony(100.0);
+          p.add_mony(100.0);                          //i 100 (euro) aggiunti mensilmente al portafoglio del cliente(non in banca)
           cout << "vuoi saltare un mese?(y/n)" << endl;
           char chs;
           cin >> chs;
           if (chs == 'y') { continue; }
-          invest += (inte * invest) / 100;
+          invest += (inte * invest) / 100; // Incrementa il capitale investito in base all'interesse mensile
       }
 
       balance += invest;
       invest = 0;
   };
   void investimento_medio(client p, double sold, double inte) {
-      if (sold - balance == 0) {
-          cout << "error" << endl;
-
-          return;                    
-      }
+     
       cout << "investimento medio di 3 anni" << endl;
     invest += sold;
     cout << "ok" << "la quantita investita aumentera e del" << "%" << inte
@@ -53,11 +49,8 @@ public:
     invest = 0;
   }
   void investimento_lungo(client p, double sold, double inte) {
-      if (sold - balance == 0) {
-          cout << "error" << endl;
-          return;                 
-      }
-      cout << "investimento medio di 5 anni" << endl;
+    
+      cout << "investimento lungo di 5 anni" << endl;
       invest += sold;
       cout << "ok" << "la quantita investita aumentera e del" << "%" << inte
           << " al mese" << endl;
@@ -74,13 +67,10 @@ public:
 
       invest = 0;
   }
-  void investimento_basso_rish(client p, double sold, double inte) {
+  void investimento_basso_rish(client p, double sold){
+    double inte;
     invest = sold;
       inte = 3.0;
-      if (sold - balance == 0) {
-          cout << "error" << endl;
-          return; 
-      }
       srand(time(NULL));
       int succ;
       succ = rand() % 100;
@@ -106,13 +96,10 @@ public:
       invest = 0;
   }
 
-  void investimento_medio_rish(client p, double sold, double inte) {
+  void investimento_medio_rish(client p, double sold) {
+    double inte;
     invest = sold;
     inte = 8.0;
-    if (sold - balance == 0) {
-      cout << "error" << endl;
-      return;
-    }
     srand(time(NULL));
     int succ;
     succ = rand() % 100;
@@ -137,13 +124,10 @@ public:
     invest = 0;
   }
 
-    void investimento_alto_rish(client p, double sold, double inte) {
+    void investimento_alto_rish(client p, double sold) {
+    double inte;
     invest = sold;
     inte = 15.0;
-    if (sold - balance == 0) {
-      cout << "error" << endl;
-      return;
-    }
     srand(time(NULL));
     int succ;
     succ = rand() % 100;

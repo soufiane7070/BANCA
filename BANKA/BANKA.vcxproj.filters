@@ -21,16 +21,10 @@
     <ClCompile Include="main.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="investimento_breve.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="client.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
     <ClCompile Include="banc.cpp">
-      <Filter>File di origine</Filter>
-    </ClCompile>
-    <ClCompile Include="Origine.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
