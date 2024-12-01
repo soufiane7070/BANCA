@@ -1,0 +1,7 @@
+(da leggere  prima di vedere il codice prefebilmente)
+Il lavoro e stato fatto da: Soufiane.
+formatter e linter: clang. #ho provato as usarli
+Ho sviluppato le funzioni nel file.h perche ci sono problemi di linking su VS #E siccome non erano troppe righe di codice non mi sono fatto un problema
+Ho impostato il main in modo che non si debba testare manualmente ogni funzione sperando di aver impostato un metodo intuitivo.
+Ovviamente mi sono concentrato solo nella leggibilita del codice come richiesto, i commenti nelle funzioni della banca sono solo nella prima funzione essendo che si 
+presenta in modo simile alle altre,
