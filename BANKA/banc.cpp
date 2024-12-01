@@ -10,5 +10,5 @@ banc::banc(client p1, double p2) {
   } else
     p1.money = p1.money - p2;
     balance = p2;
-  invest = 0;
+  invest = 0.0;
 };

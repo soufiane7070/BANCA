@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-
 int main() {
   cout << "come ti chiami?" << endl;
   string nome;
@@ -26,7 +25,10 @@ int main() {
                            "Alto rischio",  "Basso rischio",
                            "Medio rischio", "Alto rischio (alto guadagno)"};
 
-  int numeroInvestimenti = sizeof(investimenti) / sizeof(investimenti[0]); //per tenere conto di eventuali cambiamenti nei tipi di investimento
+  int numeroInvestimenti =
+      sizeof(investimenti) /
+      sizeof(investimenti[0]); // per tenere conto di eventuali cambiamenti nei
+                               // tipi di investimento
 
   cout << "Scelta del tipo d Investimento" << endl;
   cout << "-----------------------------" << endl;
@@ -39,7 +41,7 @@ int main() {
   cout << "digita la cifra da investire" << endl;
   cin >> investimento;
   if (investimento > Bnet.getbal()) {
-    cout << "error" << endl;                   //controllo se il cliente ha la somma investita
+    cout << "error" << endl; // controllo se il cliente ha la somma investita
     return 1;
   }
   double interesse;
@@ -53,33 +55,29 @@ int main() {
     Bnet.investimento_breve(p1, investimento, 3);
     break;
 
-    case 2:
+  case 2:
     cout << "digita il tasso d interesse" << endl;
 
     cin >> interesse;
     Bnet.investimento_medio(p1, investimento, 7);
-      break;
-
+    break;
 
   case 3:
-      cout << "digita il tasso d interesse" << endl;
+    cout << "digita il tasso d interesse" << endl;
 
-      cin >> interesse;
-      Bnet.investimento_lungo(p1, investimento, 10);
+    cin >> interesse;
+    Bnet.investimento_lungo(p1, investimento, 10);
     break;
 
   case 4:
     Bnet.investimento_basso_rish(p1, investimento);
     break;
 
-
   case 5:
     Bnet.investimento_medio_rish(p1, investimento);
     break;
   case 6:
     Bnet.investimento_alto_rish(p1, investimento);
-
-
 
     break;
   }

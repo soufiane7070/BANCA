@@ -9,7 +9,7 @@ public:
   banc(client p, double p2);
   void drop(double cash) { balance += cash;
   }
-  int getbal() { return balance;
+  double getbal() { return balance;
   }
   void investimento_breve(client p, double sold, double inte) {
   

@@ -132,7 +132,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="client.cpp" />
     <ClCompile Include="banc.cpp" />
-    <ClCompile Include="Origine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="banc.h" />
